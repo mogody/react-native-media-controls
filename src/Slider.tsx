@@ -1,10 +1,10 @@
 import React from "react";
 import { TouchableOpacity, View, Text, Image, ViewStyle } from "react-native";
-import RNSlider from "react-native-slider";
+import { Slider as RNSlider } from "@sharcoux/slider";
 import styles from "./MediaControls.style";
-import { humanizeVideoDuration } from "./utils";
+import { humanizeVideoDuration } from "utils";
 import { Props as MediaControlsProps } from "./MediaControls";
-import { PLAYER_STATES } from "./constants/playerStates";
+import { PLAYER_STATES } from "constants/playerStates";
 
 export type CustomSliderStyle = {
   containerStyle: ViewStyle;
@@ -72,6 +72,7 @@ const Slider = (props: Props) => {
           </Text>
         </View>
         <RNSlider
+          slideOnTap={false}
           style={[styles.progressSlider]}
           onValueChange={dragging}
           onSlidingComplete={seekVideo}

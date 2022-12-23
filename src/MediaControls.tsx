@@ -7,10 +7,10 @@ import {
   ViewStyle,
 } from "react-native";
 import styles from "./MediaControls.style";
-import { PLAYER_STATES } from "./constants/playerStates";
-import { Controls } from "./Controls";
-import { Slider, CustomSliderStyle } from "./Slider";
-import { Toolbar } from "./Toolbar";
+import { PLAYER_STATES } from "constants/playerStates";
+import { Controls } from "Controls";
+import { Slider, CustomSliderStyle } from "Slider";
+import { Toolbar } from "Toolbar";
 
 export type Props = {
   children: React.ReactNode;
@@ -30,6 +30,7 @@ export type Props = {
   showOnStart?: boolean;
   sliderStyle?: CustomSliderStyle;
   toolbarStyle?: ViewStyle;
+  controlStyle?: ViewStyle;
 };
 
 const MediaControls = (props: Props) => {
@@ -49,6 +50,7 @@ const MediaControls = (props: Props) => {
     showOnStart = true,
     sliderStyle, // defaults are applied in Slider.tsx
     toolbarStyle: customToolbarStyle = {},
+    controlStyle: customControlStyle = {},
   } = props;
   const { initialOpacity, initialIsVisible } = (() => {
     if (showOnStart) {
@@ -158,6 +160,7 @@ const MediaControls = (props: Props) => {
               isLoading={isLoading}
               mainColor={mainColor}
               playerState={playerState}
+              customControlStyle={customControlStyle}
             />
             <Slider
               progress={progress}

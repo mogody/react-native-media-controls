@@ -1,9 +1,9 @@
 {
-  "version": "2.3.0",
-  "name": "react-native-media-controls",
+  "version": "2.3.4",
+  "name": "@mogody/react-native-media-controls",
   "author": {
-    "name": "Charlie L",
-    "email": "charliesbot@gmail.com"
+    "name": "wenghang",
+    "email": "wenghang1228@gmail.com"
   },
   "license": "MIT",
   "keywords": [
@@ -42,14 +42,17 @@
     }
   },
   "devDependencies": {
-    "@types/react": "^16.9.34",
-    "@types/react-native": "^0.62.5",
+    "@miblanchard/react-native-slider": "^2.1.0",
+    "@types/react": "^18.0.26",
+    "@types/react-native": "^0.70.8",
     "husky": "^4.2.5",
     "react": "^16.13.1",
-    "react-native-slider": "^0.11.0",
     "rollup-plugin-copy-assets": "^2.0.3",
     "tsdx": "^0.13.2",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@sharcoux/slider": "^6.1.1"
   }
 }
