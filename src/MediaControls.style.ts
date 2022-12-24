@@ -28,8 +28,8 @@ export default StyleSheet.create({
   fullScreenContainer: {
     alignItems: "center",
     alignSelf: "stretch",
-    justifyContent: "center",
-    paddingLeft: 16,
+    justifyContent: "flex-end",
+    paddingLeft: 12,
   },
   playButton: {
     alignItems: "center",
@@ -39,7 +39,6 @@ export default StyleSheet.create({
     height: 40,
     justifyContent: "center",
     width: 40,
-    marginBottom: 16,
   },
   playIcon: {
     height: 16,
@@ -48,11 +47,12 @@ export default StyleSheet.create({
   },
   progressColumnContainer: {
     flex: 1,
+    paddingBottom: 4,
   },
   progressContainer: {
     flexDirection: "row",
     justifyContent: "flex-end",
-    marginBottom: -25,
+    alignItems: "flex-end",
   },
   progressSlider: {
     alignSelf: "stretch",
@@ -80,7 +80,7 @@ export default StyleSheet.create({
     alignSelf: "stretch",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: -12,
+    marginBottom: 8,
   },
   toolbar: {
     flexDirection: "row",

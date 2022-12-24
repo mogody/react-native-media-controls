@@ -42,6 +42,7 @@ const MediaControls = (props: Props) => {
     isLoading = false,
     mainColor = "rgba(12, 83, 175, 0.9)",
     onFullScreen,
+    isFullScreen,
     onReplay: onReplayCallback,
     onSeek,
     onSeeking,
@@ -166,6 +167,7 @@ const MediaControls = (props: Props) => {
               progress={progress}
               duration={duration}
               mainColor={mainColor}
+              isFullScreen={isFullScreen}
               onFullScreen={onFullScreen}
               playerState={playerState}
               onSeek={onSeek}

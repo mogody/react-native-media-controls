@@ -21,6 +21,7 @@ type Props = Pick<
   | "playerState"
   | "onSeek"
   | "onSeeking"
+  | "isFullScreen"
 > & {
   onPause: () => void;
   customSliderStyle?: CustomSliderStyle;
@@ -36,6 +37,7 @@ const Slider = (props: Props) => {
     onFullScreen,
     onPause,
     progress,
+    isFullScreen,
   } = props;
 
   const containerStyle = customSliderStyle?.containerStyle || {};
@@ -87,7 +89,7 @@ const Slider = (props: Props) => {
           minimumTrackTintColor={mainColor}
         />
       </View>
-      {Boolean(onFullScreen) && (
+      {Boolean(isFullScreen) && (
         <TouchableOpacity
           style={styles.fullScreenContainer}
           onPress={onFullScreen}
